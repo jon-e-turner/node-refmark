@@ -2,6 +2,33 @@
 
 JavaScript benchmarking suite designed to acquire two or more git refs, build them, then execute the requested tests. Uses 0x under the hood.
 
+## Command Structure
+
+```bash
+refmark
+├─ config
+│  ├─ list
+│  ├─ load
+│  ├─ init
+│  ├─ save
+│  └─ set
+│     ├─ auth
+│     ├─ baseUrl
+│     ├─ benchmark
+│     ├─ followRedirects
+│     ├─ proxy
+│     ├─ resultOrder
+│     ├─ setup
+│     └─ teardown
+├─ foo
+├─ run
+│  ├─ benchmark
+│  ├─ setup
+│  ├─ teardown
+│  └─ validate
+└─ help
+```
+
 ## Set-up
 
 1. Configure the refs to use
