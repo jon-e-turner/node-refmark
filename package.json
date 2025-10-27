@@ -1,0 +1,31 @@
+{
+  "name": "refmark",
+  "version": "1.0.0",
+  "description": "JavaScript benchmarking suite to compare two or more git refs.",
+  "keywords": [
+    "benchmark",
+    "benchmarking",
+    "perf"
+  ],
+  "homepage": "https://github.com/jon-e-turner/node-refmark#readme",
+  "bugs": {
+    "url": "https://github.com/jon-e-turner/node-refmark/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jon-e-turner/node-refmark.git"
+  },
+  "license": "MIT",
+  "author": "Jon Turner",
+  "bin": {
+    "refmark": "./index.js"
+  },
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "commander": "^14.0.2"
+  }
+}
