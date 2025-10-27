@@ -1,6 +1,6 @@
 {
   "name": "refmark",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "JavaScript benchmarking suite to compare two or more git refs.",
   "keywords": [
     "benchmark",
@@ -18,14 +18,32 @@
   "license": "MIT",
   "author": "Jon Turner",
   "bin": {
-    "refmark": "./index.js"
+    "refmark": "./bin/index.js"
   },
   "type": "module",
-  "main": "index.js",
+  "main": "./bin/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc --erasableSyntaxOnly",
+    "prestart": "npm run build",
+    "pretest": "npm run build"
   },
   "dependencies": {
-    "commander": "^14.0.2"
+    "chalk": "^5.6.2",
+    "commander": "^14.0.2",
+    "ora": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.9.1",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.5",
+    "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "glob": "^11.0.3"
+  },
+  "engines": {
+    "node": ">=22.18.0"
   }
 }
