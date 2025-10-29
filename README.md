@@ -29,6 +29,17 @@ refmark
 └─ help
 ```
 
+## MVP
+
+1. Pull a ref from GitHub
+   1. Public, so no auth yet
+      1. Use jon-e-turner/jon-e-turner
+   1. Shallow fetch of the ref into memory
+   1. Parse the object
+1. Command line arguments required
+   1. Base URI
+   1. Ref
+
 ## Set-up
 
 1. Configure the refs to use
