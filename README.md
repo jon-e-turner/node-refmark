@@ -1,6 +1,6 @@
 # RefMark
 
-JavaScript benchmarking suite designed to acquire two or more git refs, build them, then execute the requested tests. Uses 0x under the hood.
+JavaScript benchmarking suite designed to acquire two or more git refs, build them, then execute the requested tests. Uses 0x under the hood. Mostly a prototype for [refmark](https://github.com/jon-e-turner/refmark).
 
 ## Command Structure
 
@@ -49,3 +49,8 @@ refmark
 1. Configure the benchmark tests
 1. ???
 1. Profit (maybe?)
+
+## Future Work
+
+- Register a GitHub app
+  - Set up for both user authentication (interactive CLI) and for app authentication (CI/CD tool)

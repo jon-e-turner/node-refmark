@@ -29,11 +29,20 @@
     "pretest": "npm run build"
   },
   "dependencies": {
+    "@octokit/auth-token": "^6.0.0",
+    "@octokit/core": "^7.0.5",
+    "@octokit/graphql": "^9.0.2",
+    "@octokit/plugin-paginate-graphql": "^6.0.0",
+    "@octokit/plugin-retry": "^8.0.2",
+    "@octokit/plugin-throttling": "^11.0.2",
+    "@octokit/request": "^10.0.5",
+    "@octokit/request-error": "^7.0.1",
     "chalk": "^5.6.2",
     "commander": "^14.0.2",
     "ora": "^9.0.0"
   },
   "devDependencies": {
+    "@octokit/types": "^15.0.2",
     "@types/jest": "^30.0.0",
     "@types/node": "^24.9.1",
     "jest": "^30.2.0",

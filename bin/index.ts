@@ -8,21 +8,23 @@ import Refmark from '../src/refmark.js';
 program
   .version('1.0.0')
   .description('Benchmark JavaScript applications by git ref')
-  .option('-p --repo <type>', 'The name of the GitHub repository to clone')
+  .option('-o --repo <type>', 'The name of the GitHub repository')
+  .option(
+    '-p --pat <type>',
+    'GitHub authentication token',
+    process.env.REFMARK_TOKEN
+  )
   .option('-r --ref <type>', 'The ref to fetch')
-  .action((options) => {
+  .action(async (options) => {
     // Call options validator
-    const wait = ora(`Validating options...`).start();
     const fetch = ora(chalk.yellowBright(`Fetching ${options.ref}`));
 
-    setTimeout(() => {
-      wait.succeed(chalk.cyanBright(`Options OK!`));
-
-      fetch.start();
-      // Call main function
-      Refmark(options);
-      fetch.succeed();
-    }, 3000);
+    fetch.start();
+    // Call main function
+    await Refmark(options).then(
+      () => fetch.succeed,
+      () => fetch.fail
+    );
   });
 
 program.parse(process.argv);
